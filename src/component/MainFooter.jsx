@@ -19,7 +19,7 @@ const MainFooter = () => {
           </li>
           <li>
             <NavLink
-              to={"/clients"}
+              to={"/client"}
               className={({ isActive }) =>
                 isActive
                   ? "bg-black text-white px-3 py-2 rounded-lg"
