@@ -4,7 +4,7 @@ import StudentAbout from "../component/StudentAbout";
 import DiscoverSection from "../component/StudentDiscover";
 import FAQSection from "../component/StudentFaq";
 import StudentDownload from "../component/StudentDownload";
-import FooterCard from "../component/footerCard";
+import FooterCard from "../component/FooterCard";
 
 const opportunities = [
   {
