@@ -3,7 +3,7 @@ import clientHero from "../assets/images/clientHero.png";
 const ClientHeroSection = () => {
   return (
     <section className="relative my-6 px-5 md:px-8 lg:px-12">
-      <div className="relative min-h-screen rounded-4xl px-16 py-24 flex ">
+      <div className="relative lg:min-h-screen rounded-4xl px-5 md:px:-8 lg:px-16 py-24 flex ">
         <div className="absolute top-0 left-0 w-full h-full rounded-4xl">
           <img
             src={clientHero}
@@ -12,7 +12,7 @@ const ClientHeroSection = () => {
           />
           <div className="absolute top-0 left-0 bg-black/30 w-full h-full rounded-4xl "></div>
         </div>
-        <div className="max-w-4xl z-10 backdrop-blur-xs border border-white rounded-2xl bg-white/10 py-16 px-16 flex flex-col justify-center gap-10">
+        <div className="max-w-4xl z-10 backdrop-blur-xs border border-white rounded-2xl bg-white/10 py-16 px-5 md:px-8 lg:px-16 flex flex-col justify-center gap-10">
           <h1 className="text-4xl lg:text-[5.5rem] text-white font-medium leading-[110%] ">
             Collaborate with Verified Students through GigX
           </h1>
@@ -21,7 +21,7 @@ const ClientHeroSection = () => {
             students ready to take on design, marketing,
             content, and campus projects all in one place.
           </p>
-          <div className="flex flex-col gap-4 md:flex-row">
+          <div className="flex flex-col max-lg:mx-auto w-max gap-4 md:flex-row">
             <button className="cursor-pointer bg-[#007AFF] p-4 rounded-lg text-lg lg:text-xl text-white">
               Post a Gig
             </button>
