@@ -124,18 +124,24 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              to="/students"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-black"
-              onClick={toggleMenu}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-black py-2 rounded-lg px-2 text-lg text-white"
+                  : "py-2 rounded-lg px-2 text-lg transition-all duration-300 ease-in hover:bg-black hover:text-white"
+              }>
               Students
-            </Link>
-            <Link
-              to="/clients"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-black hover:bg-gray-100"
-              onClick={toggleMenu}>
-              Clients
-            </Link>
+            </NavLink>
+            <NavLink
+              to="/client"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-black py-2 rounded-lg px-2 text-lg text-white"
+                  : "py-2 rounded-lg px-2 text-lg transition-all duration-300 ease-in hover:bg-black hover:text-white"
+              }>
+              Client
+            </NavLink>
             <button class="cursor-pointer text-base  relative inline-flex gap-1 items-center justify-center px-4 py-4 bg-[#FF6D39] text-white rounded-lg hover:bg-opacity-70 font-semibold shadow-xl active:shadow-inner transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
