@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="">
       <div className=" mx-auto px-4 sm:px-6 lg:px-14 py-3">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between lg:h-16">
           {/* Logo */}
           <div className="shrink-0">
             <NavLink to="/">
@@ -55,7 +55,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none">
+              className="inline-flex flex-col items-center justify-center p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none">
               <span className="sr-only">
                 Open main menu
               </span>
@@ -95,10 +95,11 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden flex flex-col gap-6 items-center py-6 border-t border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-x-3">
             <NavLink
               to="/"
+              onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 isActive
                   ? "bg-black py-2 rounded-lg px-2 text-lg text-white"
@@ -108,6 +109,7 @@ const Header = () => {
             </NavLink>
             <NavLink
               to="/client"
+              onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 isActive
                   ? "bg-black py-2 rounded-lg px-2 text-lg text-white"
@@ -115,6 +117,8 @@ const Header = () => {
               }>
               Client
             </NavLink>
+          </div>
+          <div className="">
             <DownloadBtn />
           </div>
         </div>

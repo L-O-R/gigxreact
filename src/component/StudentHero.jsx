@@ -162,7 +162,7 @@ const HeroSection = () => {
           </div>
 
           {/* Mobile/Tablet View (lg and below) - Carousel */}
-          <div className="xl:hidden relative overflow-hidden">
+          <div className="xl:hidden relative overflow-hidden mt-10">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -172,7 +172,7 @@ const HeroSection = () => {
               }}>
               {/* Slide 1 - Pink Card */}
               <div className="w-full shrink-0 px-2 overflow-hidden">
-                <div className="bg-[#B6BAFB] rounded-3xl px-8 pt-8 h-[500px] flex flex-col justify-between">
+                <div className="bg-[#B6BAFB] rounded-3xl px-8 pt-8 h-[420px] flex flex-col justify-between">
                   <h2 className="text-3xl font-semibold text-black mb-6">
                     New gigs everyday
                   </h2>
@@ -188,7 +188,7 @@ const HeroSection = () => {
 
               {/* Slide 2 - Orange Card */}
               <div className="w-full shrink-0 px-2">
-                <div className="bg-[#FF6D39] rounded-3xl p-8 h-[500px] flex flex-col justify-center gap-10">
+                <div className="bg-[#FF6D39] rounded-3xl p-8 h-[420px] flex flex-col justify-center gap-10">
                   <div className="mb-4">
                     <div className="w-20 h-20 flex items-center justify-center">
                       <svg
@@ -234,12 +234,12 @@ const HeroSection = () => {
 
               {/* Slide 3 - Purple Card */}
               <div className="w-full shrink-0 px-2">
-                <div className="bg-[#FFFCEC] rounded-3xl overflow-hidden h-[500px] flex items-end justify-center">
+                <div className="bg-[#FFFCEC] rounded-3xl overflow-hidden h-[420px] flex items-end justify-center">
                   {/* Replace with your actual person image */}
                   <img
                     src={purpleCard}
                     alt="ID Card"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>

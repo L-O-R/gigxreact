@@ -51,7 +51,7 @@ const ClientHeroSection = () => {
               <span>Talk to Us</span>
             </button>
           </div>
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             <div className="flex flex-col gap-3 border-r border-[#767676] py-3 pr-6 ">
               <span className="text-2xl md:text-[3rem] font-medium -tracking-[0.06rem]">
                 250k+
@@ -87,6 +87,32 @@ const ClientHeroSection = () => {
             loading="eager"
             className="max-w-full w-full h-auto object-cover rounded-4xl"
           />
+        </div>
+        <div className="flex md:hidden flex-col gap-4">
+          <div className="flex flex-col gap-3 border-l-2 border-[#767676] py-3 px-6 ">
+            <span className="text-2xl md:text-[3rem] font-medium -tracking-[0.06rem]">
+              250k+
+            </span>
+            <span className="text-lg md:text-2xl text-[#7b7b7b]">
+              Gigs Completed
+            </span>
+          </div>
+          <div className="flex flex-col gap-3 border-l-2 border-[#767676] py-3 px-6">
+            <span className="text-2xl md:text-[3rem] font-medium -tracking-[0.06rem]">
+              10,000+
+            </span>
+            <span className="text-lg md:text-2xl text-[#7b7b7b]">
+              Students Engaged
+            </span>
+          </div>
+          <div className="flex flex-col gap-3 py-3 px-6  border-l-2 border-[#767676]">
+            <span className="text-2xl md:text-[3rem] font-medium -tracking-[0.06rem]">
+              25+
+            </span>
+            <span className="text-lg md:text-2xl text-[#7b7b7b]">
+              Brands Collaborated
+            </span>
+          </div>
         </div>
       </div>
     </section>

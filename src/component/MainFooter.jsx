@@ -30,7 +30,7 @@ const MainFooter = () => {
           </li>
         </ul>
       </nav>
-      <div className=" mt-6 flex justify-between items-center text-white text-lg md:text-xl">
+      <div className=" mt-6 flex flex-col md:flex-row justify-between md:items-center text-white text-lg md:text-xl gap-8">
         <span className="max-w-[90%] md:max-w-[30%]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
