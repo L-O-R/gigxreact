@@ -105,7 +105,7 @@ const FooterCard = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-10">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between py-6 px-4 md:p-12 gap-10">
           {/* Left Image Section */}
           <div className="relative w-full md:w-[45%] flex items-center justify-center bg-white pt-16 px-10 rounded-4xl border border-[#F5F4F3] overflow-hidden">
             <img
@@ -150,13 +150,13 @@ const FooterCard = () => {
           </div>
 
           {/* Right Content Section */}
-          <div className="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left gap-15 px-4">
-            <h2 className="text-4xl lg:text-[4.5rem] font-medium text-white leading-tight lg:leading-18">
+          <div className="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left gap-15 px-2 md:px-4">
+            <h2 className="text-3xl lg:text-[4.5rem] font-medium text-white leading-tight lg:leading-18">
               Your Next Gig Awaits
               <br className="hidden lg:block" />
               Get the App
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-row gap-4">
               <img
                 src={playStore}
                 alt="Get it on Google Play"

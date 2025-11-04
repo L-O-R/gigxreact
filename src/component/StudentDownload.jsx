@@ -13,7 +13,7 @@ const StudentDownload = () => {
         <DownloadBtn />
       </header>
       <div className="flex max-lg:flex-wrap gap-10 mt-14 ">
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
           <div>
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 1
@@ -63,7 +63,7 @@ const StudentDownload = () => {
             </div>
           </div>
         </div>
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
           <div>
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 2
@@ -113,7 +113,7 @@ const StudentDownload = () => {
             </div>
           </div>
         </div>
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
           <div>
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 3

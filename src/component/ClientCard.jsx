@@ -16,7 +16,7 @@ const ClientCard = () => {
         </p>
       </header>
       <div className="flex max-lg:flex-wrap gap-10 mt-14 ">
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
           <div className="pr-10 mb-14">
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 1
@@ -33,11 +33,11 @@ const ClientCard = () => {
             <img
               src={one}
               alt="one"
-              className="w-full h-full object-cover z-10"
+              className="w-full h-96 object-cover z-10"
             />
           </div>
         </div>
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
           <div className="pr-10 mb-14">
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 2
@@ -54,11 +54,11 @@ const ClientCard = () => {
             <img
               src={two}
               alt="one"
-              className="w-full h-full object-cover z-10"
+              className="w-full h-96 object-cover z-10"
             />
           </div>
         </div>
-        <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
+        <div className="overflow-y-hidden w-full h-154 lg:h-175 flex flex-col justify-between bg-white rounded-4xl pl-10 pt-14 aspect-586/733">
           <div className="pr-10 mb-6.5">
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
               Step 3
@@ -76,7 +76,7 @@ const ClientCard = () => {
             <img
               src={three}
               alt="one"
-              className="w-full h-full object-cover z-10"
+              className="w-full h-96 object-cover z-10"
             />
           </div>
         </div>
