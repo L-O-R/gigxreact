@@ -65,7 +65,7 @@ const HeroSection = () => {
     if (!isVisible) return;
 
     let start = 0;
-    const end = 56;
+    const end = 50;
     const duration = 1200;
     const stepTime = Math.abs(Math.floor(duration / end));
     const timer = setInterval(() => {
@@ -79,7 +79,7 @@ const HeroSection = () => {
 
   return (
     <section className="bg-black min-h-screen flex items-center px-4 xl:px-6 py-12 mx-2 xl:mx-14 mt-6 rounded-2xl">
-      <div className="w-full flex flex-col lg:flex-row items-center gap-8">
+      <div className="w-full flex flex-col lg:flex-row items-center gap-0">
         {/* Left Side - Text */}
         <div className=" text-white w-full xl:w-[45%] lg:pl-8">
           <h1 className="text-5xl sm:text-6xl md:text-[5.5rem] font-normal leading-[110%]">
@@ -92,9 +92,9 @@ const HeroSection = () => {
         {/* Right Side */}
         <div className="w-full xl:w-[55%]">
           {/* Desktop Grid */}
-          <div className="hidden xl:grid grid-cols-2 grid-rows-[200px_1fr_1fr] gap-4">
+          <div className="hidden xl:grid grid-cols-2 border-white grid-rows-[200px_1fr_1fr] gap-4">
             {/* Pink Card */}
-            <div className="bg-[#EC4092] rounded-4xl px-8 pt-8 flex flex-col justify-between row-span-2">
+            <div className="bg-[#B6BAFB] rounded-4xl px-8 pt-8 flex flex-col justify-between row-span-2">
               <h2 className="text-[2.75rem] leading-14 font-medium text-black mb-6">
                 New gigs everyday
               </h2>
@@ -108,11 +108,11 @@ const HeroSection = () => {
             </div>
 
             {/* Purple Card */}
-            <div className="bg-[#732BFB] rounded-3xl overflow-hidden flex items-end justify-center row-span-3">
+            <div className="bg-[#FFFCEC] rounded-3xl overflow-hidden flex items-start justify-center row-span-3">
               <img
                 src={purpleCard}
                 alt="Person using phone"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fill"
               />
             </div>
 
@@ -152,8 +152,8 @@ const HeroSection = () => {
                   </svg>
                 </div>
               </div>
-              <h2 className="text-8xl font-semibold text-black mb-2">
-                {count}+{count >= 56}
+              <h2 className="text-8xl font-medium text-black mb-2">
+                {count}+
               </h2>
               <p className="text-4xl font-normal text-black">
                 Brands ready to team up
@@ -172,7 +172,7 @@ const HeroSection = () => {
               }}>
               {/* Slide 1 - Pink Card */}
               <div className="w-full shrink-0 px-2 overflow-hidden">
-                <div className="bg-[#EC4092] rounded-3xl px-8 pt-8 h-[500px] flex flex-col justify-between">
+                <div className="bg-[#B6BAFB] rounded-3xl px-8 pt-8 h-[500px] flex flex-col justify-between">
                   <h2 className="text-3xl font-semibold text-black mb-6">
                     New gigs everyday
                   </h2>
@@ -234,11 +234,11 @@ const HeroSection = () => {
 
               {/* Slide 3 - Purple Card */}
               <div className="w-full shrink-0 px-2">
-                <div className="bg-[#732BFB] rounded-3xl overflow-hidden h-[500px] flex items-end justify-center">
+                <div className="bg-[#FFFCEC] rounded-3xl overflow-hidden h-[500px] flex items-end justify-center">
                   {/* Replace with your actual person image */}
                   <img
                     src={purpleCard}
-                    alt="Person using phone"
+                    alt="ID Card"
                     className="w-full h-full object-cover"
                   />
                 </div>

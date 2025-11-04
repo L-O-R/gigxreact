@@ -163,7 +163,7 @@ const opportunities = [
 ];
 const Client = () => {
   return (
-    <main>
+    <>
       <ClientHeroSection />
       <ClientDiscoverSection
         opportunities={opportunities}
@@ -171,7 +171,7 @@ const Client = () => {
       <ClientServiceSection />
       <ClientCard />
       <ClientCta />
-    </main>
+    </>
   );
 };
 

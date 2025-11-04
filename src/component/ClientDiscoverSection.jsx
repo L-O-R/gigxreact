@@ -2,7 +2,7 @@ import React from "react";
 
 const ClientDiscoverSection = ({ opportunities = [] }) => {
   return (
-    <section className="py-16 px-0 lg:px-14">
+    <section className="pt-24 pb-6 px-0 lg:px-14">
       <div className="">
         {/* Header */}
         <header className="px-5 md:px-8 lg:px-0 flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12">

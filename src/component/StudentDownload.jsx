@@ -2,15 +2,17 @@ import React from "react";
 import one from "../assets/images/1.png";
 import two from "../assets/images/2.png";
 import three from "../assets/images/3.png";
+import DownloadBtn from "./ui/DownloadBtn";
 const StudentDownload = () => {
   return (
     <section className="min-h-screen px-5 sm:px-8 lg:px-14 py-10">
       <header className="lg:text-center">
-        <h2 className=" text-4xl lg:text-[4rem] font-semibold">
+        <h2 className=" text-4xl lg:text-[4rem] font-semibold mb-8">
           Download. Sign Up. Start Earning.
         </h2>
+        <DownloadBtn />
       </header>
-      <div className="flex max-lg:flex-wrap gap-10 mt-10 ">
+      <div className="flex max-lg:flex-wrap gap-10 mt-14 ">
         <div className="overflow-y-hidden w-full h-154 lg:h-165 flex flex-col justify-between bg-white rounded-4xl px-10 pt-14 aspect-586/733">
           <div>
             <span className="text-xl text-[#8A8A8E] font-normal leading-relaxed">
