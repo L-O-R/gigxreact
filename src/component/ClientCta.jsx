@@ -21,7 +21,7 @@ const ClientCta = () => {
               Get campus talent for one-off tasks or ongoing
               campaigns.
             </h2>
-            <div className="flex flex-col gap-4 md:flex-row">
+            <div className="flex gap-4 flex-row">
               <button className="cursor-pointer bg-[#007AFF] p-4 rounded-lg text-lg lg:text-xl text-white">
                 Post a Gig
               </button>

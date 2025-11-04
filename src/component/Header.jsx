@@ -1,19 +1,34 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import DownloadBtn from "./ui/DownloadBtn";
+
+const TalkToUsBtn = () => (
+  <a
+    href="https://wa.me/91XXXXXXXXXX" // replace with your contact
+    className="inline-flex items-center gap-2 bg-transparent text-black px-8 py-4 border border-black text-lg md:text-xl font-medium rounded-lg hover:translate-y-1 transition">
+    Talk to us
+  </a>
+);
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation(); // expects a route like "/:audience" or "/client", "/student"
+  const isStudent = pathname === "/client"; // adjust logic to your param naming
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen((v) => !v);
+
+  const PrimaryCta = isStudent ? TalkToUsBtn : DownloadBtn;
 
   return (
     <header className="">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-14 py-3">
+      <div className="mx-auto px-4 sm:px-6 lg:px-14 py-3">
         <div className="flex items-center justify-between lg:h-16">
-          {/* Logo */}
           <div className="shrink-0">
             <NavLink to="/">
               <img
@@ -24,7 +39,6 @@ const Header = () => {
             </NavLink>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 bg-white py-2 px-3 rounded-lg">
             <NavLink
               to="/"
@@ -46,12 +60,10 @@ const Header = () => {
             </NavLink>
           </nav>
 
-          {/* Download App Button - Desktop */}
           <div className="hidden md:block">
-            <DownloadBtn />
+            <PrimaryCta />
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -93,12 +105,11 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden flex flex-col gap-6 items-center py-6 border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-x-3">
             <NavLink
-              to="/"
+              to="/student"
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 isActive
@@ -118,8 +129,8 @@ const Header = () => {
               Client
             </NavLink>
           </div>
-          <div className="">
-            <DownloadBtn />
+          <div>
+            <PrimaryCta />
           </div>
         </div>
       )}
