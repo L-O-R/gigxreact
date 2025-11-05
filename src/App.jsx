@@ -29,7 +29,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 lg:overflow-x-hidden">
           <Routes>
             <Route element={<SuspenseLayout />}>
               <Route path="/" element={<Student />} />
