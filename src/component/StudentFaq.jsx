@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import faqBanner from "../assets/images/faqBanner.png";
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const sectionRef = useRef(null);
+  const headingRef = useRef(null);
+  const imageRef = useRef(null);
 
   const faqs = [
     {
@@ -35,16 +45,111 @@ const FAQSection = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useGSAP(
+    () => {
+      // Subtle entrance animation for the entire section on scroll into view
+      gsap.fromTo(
+        sectionRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Timeline for heading entrance animation with SplitText
+      const headerTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      headerTl.set(headingRef.current, { opacity: 1 });
+
+      const splitInstance = new SplitText(
+        headingRef.current,
+        {
+          type: "lines, words",
+          linesClass: "split-line",
+          wordsClass: "split-word",
+        }
+      );
+
+      headerTl.from(splitInstance.lines, {
+        duration: 1,
+        y: 100,
+        opacity: 0,
+        ease: "power2.out",
+        stagger: 0.05, // Minimal stagger for near-simultaneous entry from below
+      });
+
+      // Fade in for image, added to the same timeline for coordination
+      headerTl.fromTo(
+        imageRef.current,
+        { opacity: 0, x: -50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        "-=0.5" // Overlap with heading animation
+      );
+
+      // Slide-in animation for FAQ items
+      gsap.fromTo(
+        ".faq-item",
+        { x: 100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      return () => {
+        // Cleanup
+        if (splitInstance) {
+          splitInstance.revert();
+        }
+        ScrollTrigger.getAll().forEach((trigger) =>
+          trigger.kill()
+        );
+      };
+    },
+    { scope: sectionRef }
+  );
+
   return (
-    <div className="min-h-screen py-16 px-5 sm:px-8 lg:px-14">
+    <div
+      ref={sectionRef}
+      className="min-h-screen py-16 px-5 sm:px-8 lg:px-14">
       <div className="mx-auto">
-        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8 lg:mb-12">
+        <h1
+          ref={headingRef}
+          className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8 lg:mb-12 overflow-hidden">
           FAQs
         </h1>
         <div className="grid lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-start">
           {/* Left side - Image */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-full ">
+            <div ref={imageRef} className="relative w-full">
               <img
                 src={faqBanner}
                 alt="GigX App Interface"
@@ -59,7 +164,7 @@ const FAQSection = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl overflow-hidden transition-all duration-300">
+                  className="faq-item bg-white rounded-2xl overflow-hidden transition-all duration-300">
                   {/* Question Button */}
                   <button
                     onClick={() => toggleFAQ(index)}
@@ -98,7 +203,7 @@ const FAQSection = () => {
                         : "max-h-0 opacity-0"
                     }`}>
                     <div className="px-6 pb-5 pt-2">
-                      <p className=" text-[1.2rem] lg:text-xl leading-relaxed">
+                      <p className="text-[1.2rem] lg:text-xl leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

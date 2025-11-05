@@ -24,7 +24,7 @@ const ClientDiscoverSection = ({ opportunities = [] }) => {
           {opportunities.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-4xl py-12 px-8 h-130">
+              className="bg-white rounded-4xl py-12 px-8 h-142">
               <div className="mb-30 w-18">{item.icon}</div>
               <h3 className="text-[2.28rem] font-semibold mb-8 leading-tight">
                 {item.title}

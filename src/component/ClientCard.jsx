@@ -33,7 +33,7 @@ const ClientCard = () => {
             <img
               src={one}
               alt="one"
-              className="w-full h-96 object-cover z-10"
+              className="w-full h-96 object-cover z-10 rounded-tl-lg"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ const ClientCard = () => {
             <img
               src={two}
               alt="one"
-              className="w-full h-96 object-cover z-10"
+              className="w-full h-96 object-cover z-10 rounded-tl-lg"
             />
           </div>
         </div>
@@ -76,7 +76,7 @@ const ClientCard = () => {
             <img
               src={three}
               alt="one"
-              className="w-full h-96 object-cover z-10"
+              className="w-full h-96 object-cover z-10 rounded-tl-lg"
             />
           </div>
         </div>

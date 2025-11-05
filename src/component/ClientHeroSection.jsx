@@ -27,7 +27,7 @@ const ClientHeroSection = () => {
                   viewBox="0 0 32 32"
                   fill="none"
                   className="w-5 h-5">
-                  <g clip-path="url(#clip0_3186_715)">
+                  <g clipPath="url(#clip0_3186_715)">
                     <path
                       d="M17 0C8.7 0 2 6.7 2 15C2 18.4 3.1 21.6 5.2 24.2L3.1 30.6C3 31 3.1 31.4 3.4 31.7C3.5 31.9 3.8 32 4 32C4.1 32 4.3 32 4.4 31.9L11.3 28.8C13.1 29.6 15 30 17 30C25.3 30 32 23.3 32 15C32 6.7 25.3 0 17 0Z"
                       fill="#25D366"

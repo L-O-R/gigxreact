@@ -124,7 +124,7 @@ const FooterCard = () => {
                 <path
                   d="M0 0L305 97.1605V322H0V0Z"
                   fill="url(#paint0_linear_2560_136)"
-                  fill-opacity="0.2"
+                  fillOpacity="0.2"
                 />
                 <defs>
                   <linearGradient
@@ -135,13 +135,13 @@ const FooterCard = () => {
                     y2="23.6469"
                     gradientUnits="userSpaceOnUse">
                     <stop
-                      stop-color="#D9D9D9"
-                      stop-opacity="0.5"
+                      stopColor="#D9D9D9"
+                      stopOpacity="0.5"
                     />
                     <stop
                       offset="1"
-                      stop-color="#737373"
-                      stop-opacity="0.9"
+                      stopColor="#737373"
+                      stopOpacity="0.9"
                     />
                   </linearGradient>
                 </defs>

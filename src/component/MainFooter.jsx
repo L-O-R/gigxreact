@@ -51,8 +51,8 @@ const MainFooter = () => {
                 x2="513.003"
                 y2="82"
                 gradientUnits="userSpaceOnUse">
-                <stop offset="0.11" stop-color="#F38343" />
-                <stop offset="0.86" stop-color="#E63932" />
+                <stop offset="0.11" stopColor="#F38343" />
+                <stop offset="0.86" stopColor="#E63932" />
               </linearGradient>
             </defs>
           </svg>
