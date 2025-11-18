@@ -3,9 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import one from "../assets/images/client11.png";
-import two from "../assets/images/client22.png";
-import three from "../assets/images/client33.png";
+
 import StepSection from "./ui/LaptopScrollAnimation";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -96,7 +94,7 @@ const ClientCard = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen px-5 sm:px-8 lg:px-14 py-10">
+      className=" px-5 sm:px-8 lg:px-14 py-20 bg-white">
       <header className="lg:text-center">
         <h2
           ref={headingRef}
@@ -105,7 +103,7 @@ const ClientCard = () => {
         </h2>
         <p
           ref={paraRef}
-          className="text-center text-lg lg:text-xl ">
+          className="lg:text-center text-lg lg:text-xl ">
           From signup to live results manage your student
           campaigns seamlessly with GigX.
         </p>

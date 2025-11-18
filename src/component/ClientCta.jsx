@@ -1,9 +1,9 @@
 import React from "react";
-import studentfooter from "../assets/images/Frame 48.svg";
+import studentfooter from "../assets/images/Image.png";
 const ClientCta = () => {
   return (
-    <section className="bg-black py-24 px-5 sm:px-8 lg:px-14">
-      <div className="relative mx-auto rounded-4xl overflow-hidden">
+    <section className="bg-black pb-24">
+      <div className="relative overflow-hidden">
         {/* Background SVG */}
         <div className="absolute w-full h-full top-0 left-0 z-0">
           <img
@@ -13,45 +13,47 @@ const ClientCta = () => {
           />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-10">
-          {/* Right Content Section */}
-          <div className="w-full md:max-w-[90%]  mx-auto flex flex-col items-center md:items-======== text-center gap-15 px-4">
-            <h2 className="text-4xl lg:text-[4.5rem] font-medium text-white leading-tight lg:leading-18">
-              Get campus talent for one-off tasks or ongoing
-              campaigns.
+        <div className="relative z-10  py-12 md:py-24">
+          <div className=" flex flex-col md:flex-row w-full md:max-w-[90%]  mx-auto items-center gap-8 px-4">
+            <h2 className="text-4xl lg:text-5xl font-normal text-white leading-tight lg:leading-[120%] flex-1">
+              Tap into student hustle launch your first gig
+              now!
             </h2>
-            <div className="flex gap-4 flex-row">
-              <button className="cursor-pointer bg-[#007AFF] p-4 rounded-lg text-lg lg:text-xl text-white">
+            <div className="flex gap-4 flex-row md:justify-end flex-[0.6]">
+              <button className="cursor-pointer bg-[#FF6E3A] p-4 rounded-lg text-lg lg:text-xl text-white">
                 Post a Gig
               </button>
               <button className="flex items-center p-4 rounded-lg text-lg lg:text-xl bg-white text-black cursor-pointer gap-3">
-                Talk to Us{" "}
-                <span className="inline-block bg-[#007AFF] p-1 rounded-full w-8 h-8">
+                <span className="inline-block  w-8 h-8">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="w-full h-full object-contain"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    className="w-full h-full "
                     fill="none">
-                    <g clipPath="url(#clip0_2531_133)">
+                    <g clip-path="url(#clip0_3498_452)">
                       <path
-                        d="M9.75 20.001C9.74938 19.3961 9.94831 18.8078 10.316 18.3274C10.6836 17.8471 11.1995 17.5013 11.7835 17.3439C12.3676 17.1865 12.9873 17.2261 13.5466 17.4566C14.1059 17.6871 14.5735 18.0957 14.877 18.619C16.967 17.697 17.75 16.25 17.75 13.5V10.5C17.75 6.508 15.499 3.75 12 3.75C8.501 3.75 6.25 6.509 6.25 10.5V14C6.24974 14.1988 6.17063 14.3894 6.03004 14.53C5.88944 14.6706 5.69883 14.7497 5.5 14.75H4.5C3.77107 14.7492 3.07221 14.4594 2.55669 13.944C2.04116 13.4287 1.75106 12.7299 1.75 12.001L1.75 11.001C1.75079 10.2718 2.04075 9.57269 2.55627 9.05698C3.0718 8.54127 3.77081 8.25106 4.5 8.25H4.978C5.735 4.679 8.326 2.25 12 2.25C15.674 2.25 18.264 4.679 19.021 8.25H19.499C20.228 8.25106 20.9269 8.54113 21.4424 9.05662C21.9579 9.57212 22.2479 10.271 22.249 11V12C22.2482 12.7291 21.9582 13.4281 21.4427 13.9437C20.9271 14.4592 20.2281 14.7492 19.499 14.75H19.19C19.1514 15.9344 18.754 17.0792 18.0505 18.0327C17.3469 18.9863 16.3703 19.7037 15.25 20.09C15.2382 20.8193 14.9371 21.5141 14.4131 22.0215C13.889 22.5289 13.1848 22.8073 12.4555 22.7955C11.7262 22.7837 11.0314 22.4826 10.524 21.9586C10.0166 21.4345 9.7382 20.7303 9.75 20.001ZM11.25 20.001C11.25 20.2482 11.3233 20.4899 11.4607 20.6955C11.598 20.901 11.7932 21.0612 12.0216 21.1558C12.2501 21.2505 12.5014 21.2752 12.7439 21.227C12.9863 21.1788 13.2091 21.0597 13.3839 20.8849C13.5587 20.7101 13.6778 20.4873 13.726 20.2449C13.7742 20.0024 13.7495 19.7511 13.6548 19.5226C13.5602 19.2942 13.4 19.099 13.1945 18.9617C12.9889 18.8243 12.7472 18.751 12.5 18.751C12.1686 18.7513 11.8508 18.883 11.6164 19.1174C11.382 19.3518 11.2503 19.6696 11.25 20.001ZM19.25 13.251H19.499C19.8306 13.251 20.1487 13.1193 20.3832 12.8849C20.6178 12.6506 20.7497 12.3326 20.75 12.001V11.001C20.75 10.6694 20.6183 10.3513 20.3839 10.1168C20.1496 9.88218 19.8316 9.75027 19.5 9.75H19.25V13.251ZM3.25 11.001V12.001C3.25053 12.3323 3.38243 12.6498 3.61676 12.8839C3.8511 13.1181 4.16873 13.2497 4.5 13.25H4.75V9.75H4.5C4.16839 9.75027 3.85045 9.88218 3.61606 10.1168C3.38166 10.3513 3.25 10.6694 3.25 11.001Z"
+                        d="M17 0C8.7 0 2 6.7 2 15C2 18.4 3.1 21.6 5.2 24.2L3.1 30.6C3 31 3.1 31.4 3.4 31.7C3.5 31.9 3.8 32 4 32C4.1 32 4.3 32 4.4 31.9L11.3 28.8C13.1 29.6 15 30 17 30C25.3 30 32 23.3 32 15C32 6.7 25.3 0 17 0Z"
+                        fill="#25D366"
+                      />
+                      <path
+                        d="M25.7 20.5C25.3 21.7 23.8 22.7 22.5 22.9C22.2 23 21.9 23 21.5 23C20.7 23 19.5 22.8 17.4 21.9C15 20.9 12.6 18.8 10.7 16.1V16C10.1 15.1 9 13.4 9 11.6C9 9.4 10.1 8.3 10.5 7.8C11 7.3 11.7 7 12.5 7C12.7 7 12.8 7 13 7C13.7 7 14.2 7.2 14.7 8.2L15.1 9C15.4 9.8 15.8 10.7 15.9 10.8C16.2 11.4 16.2 11.9 15.9 12.4C15.8 12.7 15.6 12.9 15.4 13.1C15.3 13.3 15.2 13.4 15.1 13.4C15 13.5 15 13.5 14.9 13.6C15.2 14.1 15.8 15 16.6 15.7C17.8 16.8 18.7 17.1 19.2 17.3C19.4 17.1 19.6 16.7 19.9 16.4L20 16.2C20.5 15.5 21.3 15.3 22.1 15.6C22.5 15.8 24.7 16.8 24.7 16.8L24.9 16.9C25.2 17.1 25.6 17.2 25.8 17.6C26.2 18.5 25.9 19.8 25.7 20.5Z"
                         fill="white"
                       />
                     </g>
                     <defs>
-                      <clipPath id="clip0_2531_133">
+                      <clipPath id="clip0_3498_452">
                         <rect
-                          width="24"
-                          height="24"
+                          width="32"
+                          height="32"
                           fill="white"
                         />
                       </clipPath>
                     </defs>
                   </svg>
                 </span>
+                Talk to Us
               </button>
             </div>
           </div>

@@ -149,7 +149,7 @@ const ClientDiscoverSection = ({ opportunities = [] }) => {
   return (
     <section
       ref={sectionRef}
-      className="pt-24 pb-6 px-0 lg:px-14">
+      className="pt-24 pb-6 px-0 lg:px-14 ">
       <div className="">
         {/* Header */}
         <header className="px-5 md:px-8 lg:px-0 flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12">
@@ -177,12 +177,14 @@ const ClientDiscoverSection = ({ opportunities = [] }) => {
           {opportunities.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-4xl py-12 px-8 h-142">
-              <div className="mb-30 w-18">{item.icon}</div>
-              <h3 className="text-[2.28rem] font-semibold mb-8 leading-tight">
+              className="bg-white rounded-4xl py-12 px-8 h-138 2xl:h-142">
+              <div className="mb-20 2xl:mb-30 w-18">
+                {item.icon}
+              </div>
+              <h3 className="text-4xl 2xl:text-[2.28rem] font-semibold mb-8 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-black text-[1.5rem] leading-tight">
+              <p className="text-black text-xl 2xl:text-[1.5rem] leading-tight">
                 {item.description}
               </p>
             </div>
