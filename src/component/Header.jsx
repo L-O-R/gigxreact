@@ -10,7 +10,7 @@ import DownloadBtn from "./ui/DownloadBtn";
 
 const TalkToUsBtn = () => (
   <a
-    href="https://wa.me/91XXXXXXXXXX" // replace with your contact
+    href="https://wa.me/+917559287198" // replace with your contact
     className="inline-flex items-center gap-2 bg-transparent text-black px-8 py-4 border border-black text-lg md:text-xl font-medium rounded-lg hover:translate-y-1 transition">
     Talk to us
   </a>
@@ -109,7 +109,7 @@ const Header = () => {
         <div className="md:hidden flex flex-col gap-6 items-center py-6 border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-x-3">
             <NavLink
-              to="/student"
+              to="/"
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 isActive

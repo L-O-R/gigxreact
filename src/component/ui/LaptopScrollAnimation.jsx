@@ -37,7 +37,7 @@ const StepSection = () => {
   // 1. Detect Mobile Screen
   useEffect(() => {
     const checkMobile = () =>
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () =>
@@ -65,18 +65,20 @@ const StepSection = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative h-[300vh]">
-      <div className="sticky top-0 min-h-screen  flex flex-col md:flex-row items-center justify-center md:gap-10 px-4 py-6 md:py-0">
+    <div
+      ref={containerRef}
+      className="relative h-[300vh] my-10 lg:my-auto">
+      <div className="sticky top-0 min-h-screen  flex flex-col lg:flex-row items-center justify-center md:gap-10  py-6 md:py-0">
         <div className="absolute bottom-0 lg:bottom-auto  lg:top-[5%] lg:-right-14 w-[120%] lg:w-1/2 h-[30%] lg:h-[90%] bg-[#FF6E3A] lg:rounded-tl-[3rem] lg:rounded-bl-[3rem]" />
-        <div className="overflow-hidden order-2 w-full md:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center">
-          <div className="relative w-full max-w-[500px] md:max-w-full">
+        <div className="rounded-2xl lg:rounded-none overflow-hidden order-2 w-full lg:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center">
+          <div className=" rounded-2xl lg:rounded-none relative w-full  lg:max-w-full">
             <img
               src={laptopImage}
               alt="Laptop Frame"
-              className="z-10 w-full h-auto block pointer-events-none"
+              className="hidden z-10 w-full h-auto lg:block pointer-events-none"
             />
             {/* Screen Content */}
-            <div className=" overflow-hidden absolute z-0 top-[4.5%] left-[9.7%] w-[80.5%] aspect-16/10 overflow-hidden bg-black rounded-sm">
+            <div className=" lg:rounded-none lg:absolute z-0 top-[4.5%] left-[9.7%] w-full lg:w-[80.5%] aspect-16/10 overflow-hidden bg-black rounded-2xl">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].img}
@@ -86,14 +88,14 @@ const StepSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover rounded-2xl lg:rounded-none"
                 />
               </AnimatePresence>
             </div>
           </div>
         </div>
 
-        <div className="w-full md:w-[40%] flex flex-col gap-2 md:gap-0 pl-2 md:pl-4 max-lg:mb-16 order-1">
+        <div className="w-full lg:w-[40%] flex flex-col gap-2 md:gap-6 pl-2 md:pl-4 max-lg:mb-16 order-1">
           {steps.map((step, index) => {
             const isActive = isMobile
               ? index === activeIndex
@@ -123,7 +125,7 @@ const StepSection = () => {
               <div
                 onClick={() => handleStepClick(index)}
                 key={step.id}
-                className="cursor-pointer relative flex gap-4 md:gap-6 z-10">
+                className=" cursor-pointer relative flex flex-col lg:flex-row max-lg:items-start gap-6 md:gap-8 z-10">
                 {/* Badge Column */}
                 <div className="flex flex-col items-center">
                   <motion.div
@@ -141,14 +143,14 @@ const StepSection = () => {
                   {/* Connecting Line (Desktop Only to avoid mobile clutter) */}
                   {!isLastStep && (
                     <div
-                      className="grow w-1 bg-gray-200 relative hidden md:block"
-                      style={{ minHeight: "2rem" }}>
+                      className="grow w-1 bg-gray-200 relative block"
+                      style={{ minHeight: "8rem" }}>
                       <motion.div
                         className="absolute top-0 left-0 w-full bg-orange-500"
                         initial={{ height: 0 }}
                         animate={{
                           height: isNextActive
-                            ? "100%"
+                            ? "120%"
                             : "0%",
                         }}
                         transition={{ duration: 0.4 }}
