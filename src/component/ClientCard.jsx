@@ -94,8 +94,8 @@ const ClientCard = () => {
   return (
     <section
       ref={sectionRef}
-      className=" px-5 sm:px-8 lg:px-14 py-20 bg-white">
-      <header className="lg:text-center">
+      className=" px-5 sm:px-8 lg:px-14 py-20">
+      <header className=" lg:text-center">
         <h2
           ref={headingRef}
           className="text-4xl lg:text-[4rem] font-semibold mb-4 overflow-hidden">

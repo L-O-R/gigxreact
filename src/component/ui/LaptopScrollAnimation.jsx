@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import laptopImage from "../../assets/images/laptop.png";
 // Replace with actual imports
 import client11 from "../../assets/images/client11.png";
 import client12 from "../../assets/images/client22.png";
@@ -66,20 +66,16 @@ const StepSection = () => {
 
   return (
     <div ref={containerRef} className="relative h-[300vh]">
-      {/* STICKY CONTAINER: Stack vertically on mobile, horizontally on desktop */}
       <div className="sticky top-0 min-h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center md:gap-10 px-4 py-6 md:py-0">
-        {/* --- TOP (Mobile) / RIGHT (Desktop): Laptop --- 
-            We changed the order so Laptop is visibly first on Mobile 
-        */}
-        <div className="w-full md:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center order-1 md:order-2 mb-6 md:mb-0">
+        <div className=" order-2 w-full md:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center">
           <div className="relative w-full max-w-[500px] md:max-w-full">
             <img
-              src="https://www.apple.com/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/anim/hero/large/large_0120.jpg"
+              src={laptopImage}
               alt="Laptop Frame"
               className="z-10 w-full h-auto block pointer-events-none"
             />
             {/* Screen Content */}
-            <div className="absolute z-0 top-[4.5%] left-[9.7%] w-[80.5%] aspect-[16/10] overflow-hidden bg-black rounded-sm">
+            <div className="absolute z-0 top-[4.5%] left-[9.7%] w-[80.5%] aspect-16/10 overflow-hidden bg-black rounded-sm">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].img}
@@ -96,22 +92,35 @@ const StepSection = () => {
           </div>
         </div>
 
-        {/* --- BOTTOM (Mobile) / LEFT (Desktop): Accordion Steps --- */}
-        <div className="w-full md:w-[40%] flex flex-col gap-2 md:gap-0 pl-2 md:pl-4 order-2 md:order-1">
-          {/* Continuous Vertical Line (Adjusted position for mobile) */}
-
+        <div className="w-full md:w-[40%] flex flex-col gap-2 md:gap-0 pl-2 md:pl-4 max-lg:mb-16 order-1">
           {steps.map((step, index) => {
-            // LOGIC:
-            // Mobile: Only the active index is true (Single focus)
-            // Desktop: Active index AND previous indices are true (History)
             const isActive = isMobile
               ? index === activeIndex
               : index <= activeIndex;
             const isNextActive = index < activeIndex;
             const isLastStep = index === steps.length - 1;
 
+            const handleStepClick = (index) => {
+              setActiveIndex(index);
+              // OPTIONAL: Scroll smoothly to keep behavior consistent
+              if (containerRef.current) {
+                const { top } =
+                  containerRef.current.getBoundingClientRect();
+                const targetScroll =
+                  window.scrollY +
+                  top +
+                  index *
+                    (containerRef.current.offsetHeight / 3);
+                window.scrollTo({
+                  top: targetScroll,
+                  behavior: "smooth",
+                });
+              }
+            };
+
             return (
               <div
+                onClick={() => handleStepClick(index)}
                 key={step.id}
                 className="relative flex gap-4 md:gap-6 z-10">
                 {/* Badge Column */}

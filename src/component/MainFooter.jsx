@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const MainFooter = () => {
   return (
-    <footer className="bg-black px-5 sm:px-8 lg:px-14 py-14 flex flex-col gap-10">
+    <footer className="relative bg-black px-5 sm:px-8 lg:px-14 pt-40 lg:pt-14 lg:py-14 flex flex-col gap-10">
       <nav>
         <ul className="bg-white w-max flex gap-4 px-2 py-4 rounded-lg text-black">
           <li className="">
@@ -57,7 +57,7 @@ const MainFooter = () => {
             </defs>
           </svg>
         </span>
-        <ul className="space-y-3">
+        <ul className=" absolute -top-10 right-2 lg:top-auto lg:bottom-16 lg:right-10 space-y-3 text-gray-300 ">
           <li>
             <NavLink to={"/terms"}>
               Terms & Condition

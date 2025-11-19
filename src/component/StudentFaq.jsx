@@ -139,7 +139,7 @@ const FAQSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen py-16 px-5 sm:px-8 lg:px-14">
+      className="min-h-screen py-16 px-5 sm:px-8 lg:px-14 overflow-hidden">
       <div className="mx-auto">
         <h1
           ref={headingRef}
