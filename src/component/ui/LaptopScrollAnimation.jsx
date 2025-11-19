@@ -125,7 +125,7 @@ const StepSection = () => {
               <div
                 onClick={() => handleStepClick(index)}
                 key={step.id}
-                className=" cursor-pointer relative flex flex-col lg:flex-row max-lg:items-start gap-6 md:gap-8 z-10">
+                className=" cursor-pointer relative flex  max-lg:items-start gap-6 md:gap-8 z-10">
                 {/* Badge Column */}
                 <div className="flex flex-col items-center">
                   <motion.div
@@ -143,7 +143,7 @@ const StepSection = () => {
                   {/* Connecting Line (Desktop Only to avoid mobile clutter) */}
                   {!isLastStep && (
                     <div
-                      className="grow w-1 bg-gray-200 relative block"
+                      className="grow w-1 bg-gray-200 relative hidden  lg:block"
                       style={{ minHeight: "8rem" }}>
                       <motion.div
                         className="absolute top-0 left-0 w-full bg-orange-500"
