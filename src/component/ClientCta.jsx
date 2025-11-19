@@ -1,6 +1,11 @@
 import React from "react";
 import studentfooter from "../assets/images/Image.png";
+
 const ClientCta = () => {
+  const gigLink = "https://YOUR_GIG_LINK_HERE";
+  const whatsappNumber = "+917559287198";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
   return (
     <section className="bg-black pb-24">
       <div className="relative overflow-hidden">
@@ -13,26 +18,39 @@ const ClientCta = () => {
           />
         </div>
 
-        <div className="relative z-10  py-12 md:py-24">
-          <div className=" flex flex-col md:flex-row w-full md:max-w-[90%]  mx-auto items-center gap-8 px-4">
+        <div className="relative z-10 py-12 md:py-24">
+          <div className="flex flex-col md:flex-row w-full md:max-w-[90%] mx-auto items-center gap-8 px-4">
             <h2 className="text-4xl lg:text-5xl font-normal text-white leading-tight lg:leading-[120%] flex-1">
               Tap into student hustle launch your first gig
               now!
             </h2>
+
             <div className="flex gap-4 flex-row md:justify-end flex-[0.6]">
-              <button className="cursor-pointer bg-[#FF6E3A] p-4 rounded-lg text-lg lg:text-xl text-white">
+              {/* Post a Gig Button */}
+              <a
+                href={gigLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer bg-[#FF6E3A] p-4 rounded-lg text-lg lg:text-xl text-white">
                 Post a Gig
-              </button>
-              <button className="flex items-center p-4 rounded-lg text-lg lg:text-xl bg-white text-black cursor-pointer gap-3">
-                <span className="inline-block  w-8 h-8">
+              </a>
+
+              {/* WhatsApp Button */}
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center p-4 rounded-lg text-lg lg:text-xl bg-white text-black cursor-pointer gap-3">
+                <span className="inline-block w-8 h-8">
+                  {/* WhatsApp Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
                     viewBox="0 0 32 32"
-                    className="w-full h-full "
+                    className="w-full h-full"
                     fill="none">
-                    <g clip-path="url(#clip0_3498_452)">
+                    <g clipPath="url(#clip0_3498_452)">
                       <path
                         d="M17 0C8.7 0 2 6.7 2 15C2 18.4 3.1 21.6 5.2 24.2L3.1 30.6C3 31 3.1 31.4 3.4 31.7C3.5 31.9 3.8 32 4 32C4.1 32 4.3 32 4.4 31.9L11.3 28.8C13.1 29.6 15 30 17 30C25.3 30 32 23.3 32 15C32 6.7 25.3 0 17 0Z"
                         fill="#25D366"
@@ -54,7 +72,7 @@ const ClientCta = () => {
                   </svg>
                 </span>
                 Talk to Us
-              </button>
+              </a>
             </div>
           </div>
         </div>

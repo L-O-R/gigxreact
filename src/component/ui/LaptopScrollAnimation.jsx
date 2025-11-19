@@ -66,8 +66,9 @@ const StepSection = () => {
 
   return (
     <div ref={containerRef} className="relative h-[300vh]">
-      <div className="sticky top-0 min-h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center md:gap-10 px-4 py-6 md:py-0">
-        <div className=" order-2 w-full md:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center">
+      <div className="sticky top-0 min-h-screen  flex flex-col md:flex-row items-center justify-center md:gap-10 px-4 py-6 md:py-0">
+        <div className="absolute bottom-0 lg:bottom-auto  lg:top-[5%] lg:-right-14 w-[120%] lg:w-1/2 h-[30%] lg:h-[90%] bg-[#FF6E3A] lg:rounded-tl-[3rem] lg:rounded-bl-[3rem]" />
+        <div className="overflow-hidden order-2 w-full md:w-[60%] relative h-[30vh] md:h-auto flex items-center justify-center">
           <div className="relative w-full max-w-[500px] md:max-w-full">
             <img
               src={laptopImage}
@@ -75,7 +76,7 @@ const StepSection = () => {
               className="z-10 w-full h-auto block pointer-events-none"
             />
             {/* Screen Content */}
-            <div className="absolute z-0 top-[4.5%] left-[9.7%] w-[80.5%] aspect-16/10 overflow-hidden bg-black rounded-sm">
+            <div className=" overflow-hidden absolute z-0 top-[4.5%] left-[9.7%] w-[80.5%] aspect-16/10 overflow-hidden bg-black rounded-sm">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].img}
@@ -122,7 +123,7 @@ const StepSection = () => {
               <div
                 onClick={() => handleStepClick(index)}
                 key={step.id}
-                className="relative flex gap-4 md:gap-6 z-10">
+                className="cursor-pointer relative flex gap-4 md:gap-6 z-10">
                 {/* Badge Column */}
                 <div className="flex flex-col items-center">
                   <motion.div
