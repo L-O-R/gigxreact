@@ -125,7 +125,7 @@ const StepSection = () => {
               <div
                 onClick={() => handleStepClick(index)}
                 key={step.id}
-                className=" cursor-pointer relative flex  max-lg:items-start gap-6 md:gap-8 z-10">
+                className=" cursor-pointer relative flex flex-col lg:flex-row max-lg:items-start gap-6 md:gap-8 z-10">
                 {/* Badge Column */}
                 <div className="flex flex-col items-center">
                   <motion.div
@@ -136,8 +136,8 @@ const StepSection = () => {
                       color: isActive ? "#fff" : "#374151",
                     }}
                     // Smaller badge on mobile (w-10) vs desktop (w-12)
-                    className="relative z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-lg font-bold text-base md:text-lg shadow-sm transition-colors duration-300 shrink-0">
-                    {step.id}
+                    className="relative z-10 w-auto h-auto p-2  flex items-center justify-center rounded-lg font-bold text-base md:text-lg shadow-sm transition-colors duration-300 shrink-0">
+                    Step {step.id}
                   </motion.div>
 
                   {/* Connecting Line (Desktop Only to avoid mobile clutter) */}
